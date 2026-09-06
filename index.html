@@ -191,6 +191,45 @@
   }
   .tech-line strong { color: var(--ink); font-weight: 600; }
 
+  /* ===== Case studies ===== */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .case-card {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 26px;
+    background: var(--paper);
+  }
+  .case-tag {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--navy-2);
+    background: #E9EEF5;
+    border-radius: 3px;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+  }
+  .case-card h3 { font-size: 1.08rem; line-height: 1.35; margin-bottom: 10px; }
+  .case-card p.case-intro { font-size: 0.92rem; color: var(--slate); margin: 0 0 14px; max-width: none; }
+  .case-card ul { margin: 0 0 14px; padding-left: 20px; font-size: 0.9rem; }
+  .case-card li { margin-bottom: 6px; }
+  .case-result {
+    font-size: 0.9rem;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+    margin-top: 4px;
+  }
+  .case-result strong { color: var(--navy); font-weight: 600; }
+
+  @media (max-width: 720px) {
+    .case-grid { grid-template-columns: 1fr; }
+  }
+
   /* ===== Certifications ===== */
   .cert-list { display: grid; gap: 0; }
   .cert-item {
@@ -490,6 +529,78 @@
     </div>
   </section>
 
+  <section class="panel" id="case-studies">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Troubleshooting case studies</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="case-grid reveal">
+
+        <div class="case-card">
+          <span class="case-tag">Hardware Troubleshooting</span>
+          <h3>High-End Gaming PC Restart Issue (Intel Core i9-14900KF)</h3>
+          <p class="case-intro">Received a high-end gaming PC with constant random restarts. The previous repair shop initially identified the issue as a faulty motherboard.</p>
+          <ul>
+            <li>Observed consistent random restarts during normal usage and system idle.</li>
+            <li>Verified motherboard functionality by testing with a known working 14th gen CPU.</li>
+            <li>Checked RAM, SSD, and PSU, and performed a CMOS reset to eliminate configuration issues.</li>
+            <li>Tested with an alternative power supply to rule out power-related problems.</li>
+            <li>Updated BIOS and monitored system behavior for stability improvements.</li>
+            <li>Adjusted CPU voltage settings (undervolting) to test for power or thermal instability.</li>
+            <li>Performed a clean OS reinstallation to eliminate possible software or driver-related causes.</li>
+            <li>Performed CPU cross-testing using another 14th gen processor, which stabilized the system.</li>
+            <li>Identified the processor as the root cause after systematic elimination of all other components.</li>
+            <li>Verified with Intel support that the unit was part of a known faulty batch and eligible for warranty replacement.</li>
+          </ul>
+          <div class="case-result"><strong>Result:</strong> Confirmed a faulty i9-14900KF processor, verified known batch issues with Intel, and resolved the problem through warranty replacement.</div>
+        </div>
+
+        <div class="case-card">
+          <span class="case-tag">CPU Repair</span>
+          <h3>Gaming PC CPU Repair (Bent Pins &mdash; Ryzen 5 5600X)</h3>
+          <p class="case-intro">Repaired a gaming PC CPU after the client accidentally dropped the processor during a self-build, causing severe pin damage (44 bent pins).</p>
+          <ul>
+            <li>Diagnosed CPU failure caused by accidental physical damage during client installation.</li>
+            <li>Confirmed severe damage involving 44 bent processor pins.</li>
+            <li>Carefully realigned bent pins using a ballpoint pen tip for controlled, safe adjustment.</li>
+            <li>Avoided using tweezers to prevent further damage to delicate gold pins during the repair.</li>
+            <li>Performed a detailed visual inspection under proper lighting to ensure correct alignment and prevent short circuits.</li>
+            <li>Reinstalled the processor and verified successful system POST.</li>
+            <li>Tested system stability to confirm full functionality after repair.</li>
+            <li>Advised the client on safer handling during future PC builds.</li>
+          </ul>
+          <div class="case-result"><strong>Result:</strong> Successfully repaired a severely damaged CPU with 44 bent pins, restoring full functionality and saving the client from an expensive replacement.</div>
+        </div>
+
+        <div class="case-card">
+          <span class="case-tag">PC Building</span>
+          <h3>50+ Custom PC Builds</h3>
+          <p class="case-intro">Built and configured custom gaming and office systems for clients, including 20 units for a small computer caf&eacute; and 30 units for personal use.</p>
+          <ul>
+            <li>Handled component selection, assembly, cable management, and BIOS configuration.</li>
+            <li>Performed testing and troubleshooting before delivery.</li>
+            <li>Delivered systems tailored to performance needs and budget.</li>
+          </ul>
+          <div class="case-result"><strong>Result:</strong> Consistently delivered stable, client-tailored systems with zero rework required after handoff.</div>
+        </div>
+
+        <div class="case-card">
+          <span class="case-tag">Remote Support</span>
+          <h3>Remote IT Troubleshooting</h3>
+          <p class="case-intro">Supported users remotely for common software, driver, and connectivity issues.</p>
+          <ul>
+            <li>Used TeamViewer and AnyDesk for remote diagnosis and support.</li>
+            <li>Resolved 95% of issues on first contact during freelance work.</li>
+            <li>Provided clear guidance and practical fixes for end users.</li>
+          </ul>
+          <div class="case-result"><strong>Result:</strong> High first-contact resolution rate with minimal follow-up tickets.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="certifications">
     <div class="wrap">
       <div class="section-head">
@@ -541,9 +652,9 @@
         <div class="rule"></div>
       </div>
       <div class="edu-block reveal">
-        <div class="tl-role">BS Information Technology &mdash; Undergraduate</div>
+        <div class="tl-role">BS Information Technology &mdash; Graduating Student (Trimester System)</div>
         <div class="tl-company">AMA Computer College &middot; Philippines &middot; May 2017 &ndash; Oct 2019</div>
-        <p style="margin-top:10px; font-size:0.95rem;">Only OJT and thesis remaining to graduate. Relevant coursework: networking, systems administration, technical support, computer hardware servicing, database management, web development.</p>
+        <p style="margin-top:10px; font-size:0.95rem;">Relevant coursework: networking, systems administration, technical support, computer hardware servicing, database management, web development.</p>
       </div>
     </div>
   </section>
