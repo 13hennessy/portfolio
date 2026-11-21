@@ -4,753 +4,731 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Raffy Garcia Palermo | IT Support Specialist</title>
-<meta name="description" content="Raffy Garcia Palermo — IT Support Specialist and Computer Technician with 7+ years of experience in technical support, hardware repair, networking, and web development." />
+<meta name="description" content="Raffy Garcia Palermo, IT Support Specialist and Computer Technician with 7+ years of experience in technical support, hardware repair, networking, and web development." />
+<meta name="theme-color" content="#07060d" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #14233B;
-    --navy-2: #1F3A5F;
-    --paper: #FFFFFF;
-    --panel: #F4F6F8;
-    --ink: #1B2430;
-    --slate: #5A6472;
-    --line: #DDE2E8;
-    --gold: #8C6A2C;
-    --max: 880px;
+    --bg: #07060d;
+    --ink: #F3F1FB;
+    --dim: rgba(226,222,244,0.70);
+    --line: rgba(255,255,255,0.14);
+    --violet: #7C5CFF;
+    --violet-soft: #A793FF;
+    --amber: #FFC261;
+    --teal: #55E6D6;
+    --col: min(560px, 46vw);
   }
-
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Manrope', Arial, sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  h1, h2, h3 { font-weight: 300; margin: 0; letter-spacing: -0.025em; line-height: 1.08; }
+  h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); }
+  h2 { font-size: clamp(2rem, 4.4vw, 3.3rem); margin-bottom: 22px; }
+  h3 { font-weight: 500; letter-spacing: -0.01em; }
+  a { color: var(--violet-soft); text-decoration: none; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+  p { color: var(--dim); max-width: 62ch; margin: 0 0 14px; }
 
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'IBM Plex Sans', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+  #gl { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+  body.no-gl #gl { display: none; }
+  main, header, footer { position: relative; z-index: 2; }
+  .vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(7,6,13,0.85) 100%); }
 
-  h1, h2, h3 {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-weight: 600;
-    color: var(--navy);
-    margin: 0;
-  }
+  /* Top bar */
+  .bar { position: fixed; top: 0; left: 0; right: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 18px max(20px, 4vw); background: linear-gradient(to bottom, rgba(7,6,13,0.85), rgba(7,6,13,0)); }
+  .brand { color: var(--ink); font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
+  .brand i { width: 10px; height: 10px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fff, var(--violet) 60%); box-shadow: 0 0 14px var(--violet); }
+  .bar nav { display: flex; align-items: center; gap: 26px; }
+  .bar nav a { color: var(--dim); font-size: 0.85rem; font-weight: 500; }
+  .bar nav a:hover { color: var(--ink); }
+  .pill { display: inline-block; background: var(--violet); color: #fff !important; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; transition: box-shadow .25s ease, transform .15s ease; }
+  .pill:hover { box-shadow: 0 0 26px rgba(124,92,255,0.6); transform: translateY(-1px); }
+  @media (max-width: 860px) { .bar nav a:not(.pill) { display: none; } }
 
-  a { color: var(--navy-2); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
-
-  p { max-width: 62ch; }
-
-  /* ===== Header ===== */
-  header.hero {
-    background: var(--navy);
-    color: #EDEFF2;
-    padding: 64px 0 48px;
-  }
-  .hero-inner {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  .hero-photo {
-    flex: 0 0 auto;
-    width: 132px;
-    height: 132px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.18);
-  }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .hero-text { flex: 1 1 340px; min-width: 260px; }
-  .hero-text h1 { font-size: 2.15rem; color: #fff; line-height: 1.15; }
-  .hero-role {
-    margin: 8px 0 0;
-    font-size: 1.05rem;
-    color: #C9CFD8;
-    font-weight: 500;
-  }
-  .hero-meta {
-    margin-top: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 22px;
-    font-size: 0.92rem;
-    color: #C9CFD8;
-  }
-  .hero-meta span { position: relative; padding-left: 0; }
-  .hero-meta a { color: #EDEFF2; text-decoration: none; border-bottom: 1px solid rgba(237,239,242,0.35); }
-  .hero-meta a:hover { border-color: var(--gold); }
-  .hero-actions { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; }
-
-  .btn {
-    display: inline-block;
-    padding: 11px 22px;
-    font-size: 0.92rem;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 3px;
-    border: 1px solid transparent;
-    cursor: pointer;
-  }
-  .btn-primary { background: var(--gold); color: #fff; }
-  .btn-primary:hover { background: #7a5b22; }
-  .btn-outline { background: transparent; color: #EDEFF2; border-color: rgba(237,239,242,0.4); }
-  .btn-outline:hover { border-color: #EDEFF2; }
-
-  /* ===== Sections ===== */
-  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
-  section:last-of-type { border-bottom: none; }
-  section.panel { background: var(--panel); }
-
-  .section-head { margin-bottom: 28px; }
-  .section-head h2 { font-size: 1.5rem; }
-  .section-head .rule {
-    width: 46px;
-    height: 3px;
-    background: var(--gold);
-    margin-top: 12px;
+  /* Sections: text column sits opposite the particle shape */
+  .scene { min-height: 100vh; min-height: 100svh; padding: 15vh max(20px, 4vw) 12vh; display: flex; align-items: center; }
+  .scene > .col { width: var(--col); }
+  .scene.shape-right > .col { margin-right: auto; }
+  .scene.shape-left > .col { margin-left: auto; }
+  .scene.hero { padding-top: 18vh; }
+  @media (max-width: 980px) {
+    :root { --col: 100%; }
+    .scene > .col { margin: 0 auto !important; }
   }
 
-  /* ===== Summary ===== */
-  .summary-block {
-    border-left: 3px solid var(--gold);
-    padding-left: 24px;
-  }
-  .summary-block p { color: var(--ink); font-size: 1.02rem; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
 
-  /* ===== Competencies ===== */
-  .comp-list { display: grid; gap: 18px; }
-  .comp-row {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 18px;
-    padding: 14px 0;
-    border-top: 1px solid var(--line);
-  }
-  .comp-row:first-child { border-top: none; }
-  .comp-label {
-    font-family: 'Source Serif 4', serif;
-    font-weight: 600;
-    color: var(--navy);
-    font-size: 0.98rem;
-  }
-  .comp-values { color: var(--slate); font-size: 0.95rem; max-width: none; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; padding: 5px 13px; border-radius: 999px; background: rgba(85,230,214,0.12); border: 1px solid rgba(85,230,214,0.35); color: #c4f8f2; margin-bottom: 22px; }
+  .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); animation: ping 2.4s ease-out infinite; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(85,230,214,0.6); } 80%,100% { box-shadow: 0 0 0 9px rgba(85,230,214,0); } }
+  .lead { font-size: 1.1rem; margin-top: 22px; color: var(--dim); }
+  .actions { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 24px; font-size: 0.92rem; font-weight: 600; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); background: rgba(255,255,255,0.04); font-family: inherit; transition: background .2s ease, border-color .2s ease; }
+  .btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.35); }
+  .meta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.88rem; color: var(--dim); }
+  .meta a { color: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.28); }
 
-  /* ===== Experience timeline ===== */
-  .timeline { position: relative; }
-  .tl-item {
-    position: relative;
-    padding-left: 32px;
-    padding-bottom: 36px;
-    border-left: 2px solid var(--line);
-    margin-left: 4px;
-  }
+  /* About */
+  .about-top { display: flex; gap: 22px; align-items: flex-start; margin: 6px 0 8px; }
+  .portrait { flex: 0 0 auto; width: 104px; height: 128px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-top p { color: var(--ink); font-size: 1.02rem; }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px 28px; margin-top: 24px; border-top: 1px solid var(--line); padding-top: 22px; }
+  .stat b { display: block; font-weight: 300; font-size: 2.3rem; line-height: 1.1; letter-spacing: -0.03em; }
+  .stat span { color: var(--dim); font-size: 0.86rem; }
+
+  /* Skills */
+  .comp-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 26px 30px; }
+  .comp-card, .comp-card-inner { height: 100%; }
+  .comp-card-inner { border-top: 1px solid var(--line); padding-top: 14px; }
+  .comp-label { display: block; font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 4px; }
+  .comp-values { color: var(--dim); font-size: 0.86rem; line-height: 1.6; }
+  @media (max-width: 560px) { .comp-list { grid-template-columns: 1fr; } }
+
+  /* Experience */
+  .tl-item { position: relative; padding: 0 0 28px 26px; margin-left: 4px; border-left: 1px solid var(--line); }
   .tl-item:last-child { padding-bottom: 0; }
-  .tl-item::before {
-    content: "";
-    position: absolute;
-    left: -7px;
-    top: 4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--paper);
-    border: 2px solid var(--gold);
-  }
-  .tl-date {
-    font-family: 'Source Serif 4', serif;
-    color: var(--gold);
-    font-size: 0.88rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .tl-role { font-size: 1.08rem; font-weight: 600; color: var(--navy); }
-  .tl-company { color: var(--slate); font-size: 0.94rem; margin-bottom: 10px; }
-  .tl-item ul { margin: 0; padding-left: 20px; color: var(--ink); font-size: 0.95rem; }
-  .tl-item li { margin-bottom: 5px; }
+  .tl-item::before { content: ""; position: absolute; left: -5px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: var(--violet); box-shadow: 0 0 12px var(--violet); }
+  .tl-date { color: var(--amber); font-size: 0.82rem; font-weight: 600; }
+  .tl-role { font-size: 1.08rem; font-weight: 500; color: var(--ink); line-height: 1.35; margin-top: 2px; }
+  .tl-company { color: var(--dim); font-size: 0.88rem; margin-bottom: 8px; }
+  .tl-item ul { margin: 0; padding-left: 18px; font-size: 0.9rem; }
+  .tl-item li { margin-bottom: 5px; color: var(--dim); }
 
-  /* ===== Project ===== */
-  .project-block h3 { font-size: 1.2rem; }
-  .project-meta { color: var(--slate); font-size: 0.9rem; margin: 6px 0 16px; }
-  .project-block ul { padding-left: 20px; font-size: 0.95rem; }
-  .project-block li { margin-bottom: 6px; }
-  .tech-line {
-    margin-top: 16px;
-    font-size: 0.88rem;
-    color: var(--slate);
-    border-top: 1px solid var(--line);
-    padding-top: 14px;
-  }
-  .tech-line strong { color: var(--ink); font-weight: 600; }
+  /* Project + cases */
+  .project-block h3 { font-size: 1.25rem; }
+  .project-meta { color: var(--dim); font-size: 0.86rem; margin: 6px 0 14px; }
+  .project-block ul { padding-left: 18px; font-size: 0.9rem; margin: 0; }
+  .project-block li { margin-bottom: 6px; color: var(--dim); }
+  .tech-line { margin-top: 12px; font-size: 0.84rem; color: var(--dim); }
+  .tech-line strong { color: var(--ink); }
+  .sub { margin: 44px 0 14px; font-size: 1.5rem; }
+  .case-grid { border-top: 1px solid var(--line); }
+  .case-card { border-bottom: 1px solid var(--line); }
+  .case-card summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 22px; gap: 4px 12px; align-items: center; padding: 16px 0; }
+  .case-card summary::-webkit-details-marker { display: none; }
+  .case-tag { grid-column: 1; justify-self: start; font-size: 0.7rem; font-weight: 600; color: #120c2e; background: var(--amber); border-radius: 999px; padding: 2px 11px; }
+  .case-card h3 { grid-column: 1; font-size: 1rem; line-height: 1.35; color: var(--ink); }
+  .chev { grid-column: 2; grid-row: 1 / span 2; width: 10px; height: 10px; border-right: 2px solid var(--dim); border-bottom: 2px solid var(--dim); transform: rotate(45deg); transition: transform .25s ease; justify-self: center; }
+  .case-card[open] .chev { transform: rotate(-135deg); }
+  .case-body { padding: 0 0 18px; }
+  .case-body ul { margin: 0 0 12px; padding-left: 18px; font-size: 0.86rem; }
+  .case-body li { margin-bottom: 5px; color: var(--dim); }
+  .case-intro { font-size: 0.88rem; }
+  .case-result { font-size: 0.86rem; color: var(--ink); }
+  .case-result strong { color: var(--teal); }
 
-  /* ===== Case studies ===== */
-  .case-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  .case-card {
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 26px;
-    background: var(--paper);
-  }
-  .case-tag {
-    display: inline-block;
-    font-size: 0.76rem;
-    font-weight: 600;
-    color: var(--navy-2);
-    background: #E9EEF5;
-    border-radius: 3px;
-    padding: 4px 10px;
-    margin-bottom: 14px;
-  }
-  .case-card h3 { font-size: 1.08rem; line-height: 1.35; margin-bottom: 10px; }
-  .case-card p.case-intro { font-size: 0.92rem; color: var(--slate); margin: 0 0 14px; max-width: none; }
-  .case-card ul { margin: 0 0 14px; padding-left: 20px; font-size: 0.9rem; }
-  .case-card li { margin-bottom: 6px; }
-  .case-result {
-    font-size: 0.9rem;
-    color: var(--ink);
-    border-top: 1px solid var(--line);
-    padding-top: 14px;
-    margin-top: 4px;
-  }
-  .case-result strong { color: var(--navy); font-weight: 600; }
-
-  @media (max-width: 720px) {
-    .case-grid { grid-template-columns: 1fr; }
-  }
-
-  /* ===== Certifications ===== */
-  .cert-list { display: grid; gap: 0; }
-  .cert-item {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 18px 0;
-    border-top: 1px solid var(--line);
-  }
-  .cert-item:first-child { border-top: none; }
-  .cert-logo {
-    width: 46px; height: 46px;
-    object-fit: contain;
-    flex: 0 0 auto;
-  }
-  .cert-info { flex: 1 1 auto; }
-  .cert-name { font-weight: 600; color: var(--navy); font-size: 0.98rem; }
-  .cert-issuer { color: var(--slate); font-size: 0.88rem; margin-top: 2px; }
-  .cert-link { flex: 0 0 auto; font-size: 0.88rem; text-decoration: none; color: var(--navy-2); border-bottom: 1px solid var(--line); }
-  .cert-link:hover { border-color: var(--gold); }
-
-  .cert-progress { margin-top: 22px; font-size: 0.92rem; color: var(--slate); }
+  /* Certs */
+  .cert-list { border-top: 1px solid var(--line); }
+  .cert-card, .cert-card-inner { display: block; }
+  .cert-card { border-bottom: 1px solid var(--line); }
+  .cert-card-inner { display: flex; align-items: center; gap: 14px; padding: 14px 0; flex-wrap: wrap; }
+  .cert-top { display: flex; align-items: center; gap: 14px; flex: 1 1 280px; min-width: 0; }
+  .cert-logo { width: 38px; height: 38px; object-fit: contain; flex: 0 0 auto; border-radius: 9px; background: rgba(255,255,255,0.92); padding: 4px; }
+  .cert-info { min-width: 0; }
+  .cert-name { font-weight: 500; font-size: 0.93rem; line-height: 1.35; color: var(--ink); }
+  .cert-issuer { color: var(--dim); font-size: 0.8rem; }
+  .cert-link { font-size: 0.82rem; font-weight: 600; color: var(--violet-soft); border-bottom: 1px solid rgba(167,147,255,0.4); white-space: nowrap; }
+  .cert-progress { margin-top: 18px; font-size: 0.88rem; }
   .cert-progress strong { color: var(--ink); }
+  .edu-block { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .edu-block .tl-role { font-size: 1.05rem; }
+  .edu-block p { font-size: 0.88rem; }
 
-  /* ===== Education ===== */
-  .edu-block .tl-role { margin-bottom: 2px; }
-
-  /* ===== Footer / Contact ===== */
-  footer {
-    background: var(--navy);
-    color: #EDEFF2;
-    padding: 56px 0 44px;
-  }
-  footer h2 { color: #fff; font-size: 1.4rem; }
-  footer p { color: #C9CFD8; }
-  .contact-grid {
-    margin-top: 28px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px 28px;
-  }
-  .contact-item .label { display: block; font-size: 0.78rem; color: #93A0B2; margin-bottom: 4px; }
-  .contact-item a, .contact-item span.value { color: #EDEFF2; text-decoration: none; font-size: 0.96rem; }
-  .contact-item a:hover { text-decoration: underline; }
-  .footer-actions { margin-top: 34px; }
-  .footer-bottom {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.14);
-    font-size: 0.82rem;
-    color: #8C97A6;
-  }
-
-  @media (max-width: 620px) {
-    .hero-inner { flex-direction: column; align-items: flex-start; }
-    .comp-row { grid-template-columns: 1fr; gap: 4px; }
-    header.hero { padding: 48px 0 36px; }
-    section { padding: 44px 0; }
-  }
-
-  /* ===== Motion ===== */
-
-  /* Hero entrance: one orchestrated moment on load */
-  .hero-photo, .hero-text > * {
-    opacity: 0;
-    transform: translateY(14px);
-    animation: hero-in 0.7s cubic-bezier(.22,.61,.36,1) forwards;
-  }
-  .hero-photo { animation-delay: .05s; }
-  .hero-text h1 { animation-delay: .15s; }
-  .hero-text .hero-role { animation-delay: .25s; }
-  .hero-text .hero-meta { animation-delay: .35s; }
-  .hero-text .hero-actions { animation-delay: .45s; }
-  @keyframes hero-in {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Scroll reveals: fade up once, first time a section enters view */
-  .reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .6s ease, transform .6s ease;
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Timeline draw-in */
-  .timeline {
-    --tl-progress: 0%;
-  }
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 0;
-    width: 2px;
-    height: var(--tl-progress);
-    background: var(--gold);
-    transition: height .15s linear;
-    z-index: 1;
-  }
-  .tl-item { transition: opacity .5s ease, transform .5s ease; opacity: 0; transform: translateY(14px); }
-  .tl-item.is-visible { opacity: 1; transform: translateY(0); }
-  .tl-item::before { transition: border-color .3s ease, transform .3s ease; z-index: 2; }
-  .tl-item.is-visible::before { border-color: var(--gold); }
-
-  /* Refined hover states (in addition to existing color changes) */
-  .btn { transition: background-color .25s ease, border-color .25s ease, transform .15s ease; }
-  .btn:active { transform: translateY(1px); }
-  .hero-meta a, .cert-link, .contact-item a { transition: border-color .25s ease, color .25s ease; }
-  .cert-item { transition: background-color .25s ease; }
-  .cert-item:hover { background-color: rgba(140,106,44,0.05); }
+  /* Contact */
+  .contact-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px 26px; }
+  .contact-item .label { display: block; font-size: 0.78rem; color: var(--amber); font-weight: 600; margin-bottom: 2px; }
+  .contact-item a, .contact-item span.value { color: var(--ink); font-size: 0.92rem; overflow-wrap: anywhere; }
+  @media (max-width: 560px) { .contact-grid { grid-template-columns: 1fr; } }
+  .foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--dim); }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .hero-photo, .hero-text > *, .reveal, .tl-item {
-      animation: none !important;
-      transition: none !important;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    .timeline::before { transition: none !important; }
+    .status i { animation: none; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   }
 </style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
-<header class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-photo">
-      <img src="profile.jpg" alt="Portrait of Raffy Garcia Palermo" />
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="bar">
+  <a class="brand" href="#top"><i></i>Raffy Palermo</a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#contact">Contact</a>
+    <a class="pill" href="RaffyPalermo_IT_SUPPORT_Resume.pdf" download="Raffy_Garcia_Palermo_Resume.pdf">Resume</a>
+  </nav>
+</div>
+
+<header id="top" class="scene hero shape-right" data-scene data-side="1">
+  <div class="col">
+    <span class="status"><i></i>Open to work</span>
+    <h1>Keeping people and their machines running.</h1>
+    <p class="lead">Raffy Garcia Palermo, IT Support Specialist and Computer Technician. 7+ years in technical support, hardware repair and networking, now growing toward network and systems work.</p>
+    <div class="actions">
+      <a class="pill" href="RaffyPalermo_IT_SUPPORT_Resume.pdf" download="Raffy_Garcia_Palermo_Resume.pdf">Download resume</a>
+      <a class="btn" href="#contact">Contact me</a>
     </div>
-    <div class="hero-text">
-      <h1>Raffy Garcia Palermo</h1>
-      <p class="hero-role">IT Support Specialist &amp; Computer Technician</p>
-      <div class="hero-meta">
-        <span>La Union, Philippines</span>
-        <span><a href="mailto:raffypalermowork@gmail.com">raffypalermowork@gmail.com</a></span>
-        <span><a href="tel:+639955814916">+63 995 581 4916</a></span>
-        <span><a href="https://linkedin.com/in/raffy-garcia-palermo" target="_blank" rel="noopener">LinkedIn</a></span>
-      </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="RaffyPalermo_IT_SUPPORT_Resume.pdf" download="Raffy_Garcia_Palermo_Resume.pdf">Download resume</a>
-        <a class="btn btn-outline" href="#contact">Contact me</a>
-      </div>
+    <div class="meta">
+      <span>La Union, Philippines</span>
+      <a href="https://linkedin.com/in/raffy-garcia-palermo" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </header>
 
 <main>
 
-  <section id="summary">
-    <div class="wrap">
-      <div class="summary-block reveal">
-        <p>IT Support Specialist and Computer Technician with 7+ years of experience across technical support, hardware repair, basic networking, and customer-facing service roles &mdash; including supervising daily operations for a high-traffic computer caf&eacute; and providing on-site and remote support for individual and business clients. Recently developed a full-stack web-based online ordering system using PHP, MySQL, HTML, CSS, and JavaScript for a real small business, demonstrating hands-on web development, database, and system testing skills. Skilled at communicating clearly with non-technical users, troubleshooting under pressure, and adapting quickly to new environments. Open to remote Technical Support, Helpdesk, and IT Support roles.</p>
-      </div>
+<section id="about" class="scene shape-left" data-scene data-side="-1">
+  <div class="col reveal">
+    <h2>Fix it, explain it, keep it running.</h2>
+    <div class="about-top">
+      <div class="portrait"><img src="profile.jpg" alt="Portrait of Raffy Garcia Palermo" /></div>
+      <p>IT Support Specialist with 7+ years of hands-on experience providing remote and on-site Tier 1/Tier 2 support for business and residential clients. Skilled in troubleshooting hardware, software, Windows, printer, and network connectivity issues; setting up and deploying PCs; managing user accounts and access; and documenting every request clearly. Also experienced in web development, building and deploying websites for small-business clients. Detail-oriented, quick to learn new tools, and focused on first-contact resolution and clear communication. Google IT Support Professional Certificate holder; CompTIA A+ and CCNA in progress.</p>
     </div>
-  </section>
-
-  <section class="panel" id="skills">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Core competencies</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="comp-list reveal">
-        <div class="comp-row">
-          <div class="comp-label">IT support &amp; helpdesk</div>
-          <div class="comp-values">L1/L2 support, remote &amp; on-site troubleshooting, ticketing systems, first-contact resolution, end-user support, service desk</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Hardware &amp; repair</div>
-          <div class="comp-values">PC assembly &amp; custom builds, component-level diagnostics, hardware repair &amp; upgrades, OS installation, laptop &amp; desktop repair, mobile device support</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Web development</div>
-          <div class="comp-values">PHP, MySQL, HTML, CSS, JavaScript, XAMPP, web-based system development, database design &amp; management</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Programming</div>
-          <div class="comp-values">Python (basic), C++ (basic), JavaScript (basic), PHP</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Networking</div>
-          <div class="comp-values">TCP/IP, DNS, DHCP, VPN, Wi-Fi, network troubleshooting</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Systems &amp; administration</div>
-          <div class="comp-values">Windows 10/11, Active Directory, user account management, Microsoft 365, Google Workspace, endpoint security, system maintenance</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-label">Tools &amp; remote support</div>
-          <div class="comp-values">TeamViewer, AnyDesk, PowerShell, CLI, Git, Remote Desktop, backup solutions, VS Code</div>
-        </div>
-      </div>
+    <p>Open to on-site, hybrid, or remote roles in the Philippines or abroad. Willing to relocate, and open to shifting schedules, night shifts, and weekends. Can start immediately.</p>
+    <div class="stats">
+      <div class="stat"><b>7+</b><span>years in IT support</span></div>
+      <div class="stat"><b>50+</b><span>custom PCs built</span></div>
+      <div class="stat"><b>100+</b><span>users supported at the caf&eacute;</span></div>
+      <div class="stat"><b>6</b><span>certificates earned</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Work experience</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="timeline">
-
-        <div class="tl-item">
-          <div class="tl-date">Mar 2024 &ndash; Present</div>
-          <div class="tl-role">IT Support &amp; Managed Services Technician</div>
-          <div class="tl-company">Self-Employed / PC Build &amp; Repair Services &middot; Philippines</div>
-          <ul>
-            <li>Manage the full client lifecycle for small business and residential clients, including setup, account/access configuration, troubleshooting, and ongoing support.</li>
-            <li>Deliver remote and on-site IT support by troubleshooting hardware, software, Windows, and network connectivity issues, and installing and maintaining workstations, network devices, and backup solutions.</li>
-            <li>Perform proactive system maintenance, software updates, endpoint security, technical documentation, and timely issue resolution.</li>
-          </ul>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">Jul 2023 &ndash; Nov 2023</div>
-          <div class="tl-role">Data Analyst / Audio Data Labeling</div>
-          <div class="tl-company">Appen &middot; Remote</div>
-          <ul>
-            <li>Transcribed and reviewed 100+ hours of audio data with high accuracy, demonstrating strong documentation discipline and quality assurance in a remote environment.</li>
-            <li>Validated, corrected, and organized large datasets while meeting strict deadlines and quality benchmarks.</li>
-            <li>Followed standard operating procedures and process-improvement guidelines to deliver consistent client-required outputs.</li>
-          </ul>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">Sep 2020 &ndash; Feb 2023</div>
-          <div class="tl-role">Computer Repair Technician</div>
-          <div class="tl-company">Self-Employed / PC Build &amp; Repair Services &middot; Philippines</div>
-          <ul>
-            <li>Worked as a sole operator handling customer requirements, diagnosis, repair, configuration, and final delivery independently.</li>
-            <li>Built and assembled 50+ custom PCs from scratch &mdash; 20 units for a small computer caf&eacute; and 30 units for personal use &mdash; selecting components based on client needs and budget.</li>
-            <li>Performed hardware diagnostics, component-level repairs, upgrades, OS installation, and system configuration for desktops and laptops.</li>
-          </ul>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">Jan 2016 &ndash; Oct 2016</div>
-          <div class="tl-role">IT Support Specialist / Computer Technician</div>
-          <div class="tl-company">GadgetzBiz Repair Shop &middot; Philippines</div>
-          <ul>
-            <li>Performed L1/L2 diagnostics and repairs on desktops, laptops, and mobile devices, including component-level troubleshooting.</li>
-            <li>Resolved network connectivity issues by configuring TCP/IP, DNS, and DHCP to restore stable connections for clients.</li>
-            <li>Managed repair workflows using a manual ticketing system, ensuring accurate tracking of service history, inventory, and resolutions.</li>
-          </ul>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">Jul 2013 &ndash; Jan 2016</div>
-          <div class="tl-role">Computer Caf&eacute; Supervisor &amp; Technician</div>
-          <div class="tl-company">CityLink &middot; Philippines</div>
-          <ul>
-            <li>Supervised daily operations of a computer caf&eacute; supporting 100+ users across 30+ workstations, acting as the primary point of contact for technical issues.</li>
-            <li>Maintained near 100% system uptime by diagnosing and repairing hardware and software issues, combined with proactive troubleshooting and routine maintenance.</li>
-            <li>Trained staff in basic troubleshooting procedures, improving overall team efficiency and service quality.</li>
-          </ul>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">Jan 2013 &ndash; Jun 2013</div>
-          <div class="tl-role">Outbound Sales Representative</div>
-          <div class="tl-company">Zaltivar Telecom Services &middot; Philippines</div>
-          <ul>
-            <li>Conducted outbound calls to prospective customers, delivered professional customer service, and identified eligibility for Maybank credit card products.</li>
-            <li>Explained product information, resolved customer inquiries, and built rapport through effective communication and active listening.</li>
-            <li>Documented customer interactions, followed established procedures, and consistently met quality and productivity expectations.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="panel" id="project">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Featured project</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="project-block reveal">
-        <h3>Web-Based Online Ordering System &mdash; Online Grocery</h3>
-        <div class="project-meta">Full-stack web development project &middot; February 2026</div>
-        <ul>
-          <li>Designed and developed a complete web-based online ordering system for a real small business using PHP, MySQL, HTML, CSS, and JavaScript, enabling customers to browse products, add items to a cart, and place orders online with pickup or delivery options.</li>
-          <li>Built customer features including registration, login, cart, checkout, and order tracking, plus an admin dashboard for order, product, and customer management.</li>
-          <li>Designed and implemented a relational MySQL database with 5 normalized tables covering users, products, orders, order items, and administrator data.</li>
-          <li>Integrated Tawk.to live chat for customer-to-staff communication and developed an AI chatbot as part of the online ordering system.</li>
-          <li>Deployed and tested the system end-to-end across 14 functional test cases, with all documented tests passing.</li>
-        </ul>
-        <div class="tech-line"><strong>Tech stack:</strong> PHP, MySQL, HTML5, CSS3, JavaScript, XAMPP, VS Code, Tawk.to</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel" id="case-studies">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Troubleshooting case studies</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="case-grid reveal">
-
-        <div class="case-card">
-          <span class="case-tag">Hardware Troubleshooting</span>
-          <h3>High-End Gaming PC Restart Issue (Intel Core i9-14900KF)</h3>
-          <p class="case-intro">Received a high-end gaming PC with constant random restarts. The previous repair shop initially identified the issue as a faulty motherboard.</p>
-          <ul>
-            <li>Observed consistent random restarts during normal usage and system idle.</li>
-            <li>Verified motherboard functionality by testing with a known working 14th gen CPU.</li>
-            <li>Checked RAM, SSD, and PSU, and performed a CMOS reset to eliminate configuration issues.</li>
-            <li>Tested with an alternative power supply to rule out power-related problems.</li>
-            <li>Updated BIOS and monitored system behavior for stability improvements.</li>
-            <li>Adjusted CPU voltage settings (undervolting) to test for power or thermal instability.</li>
-            <li>Performed a clean OS reinstallation to eliminate possible software or driver-related causes.</li>
-            <li>Performed CPU cross-testing using another 14th gen processor, which stabilized the system.</li>
-            <li>Identified the processor as the root cause after systematic elimination of all other components.</li>
-            <li>Verified with Intel support that the unit was part of a known faulty batch and eligible for warranty replacement.</li>
-          </ul>
-          <div class="case-result"><strong>Result:</strong> Confirmed a faulty i9-14900KF processor, verified known batch issues with Intel, and resolved the problem through warranty replacement.</div>
-        </div>
-
-        <div class="case-card">
-          <span class="case-tag">CPU Repair</span>
-          <h3>Gaming PC CPU Repair (Bent Pins &mdash; Ryzen 5 5600X)</h3>
-          <p class="case-intro">Repaired a gaming PC CPU after the client accidentally dropped the processor during a self-build, causing severe pin damage (44 bent pins).</p>
-          <ul>
-            <li>Diagnosed CPU failure caused by accidental physical damage during client installation.</li>
-            <li>Confirmed severe damage involving 44 bent processor pins.</li>
-            <li>Carefully realigned bent pins using a ballpoint pen tip for controlled, safe adjustment.</li>
-            <li>Avoided using tweezers to prevent further damage to delicate gold pins during the repair.</li>
-            <li>Performed a detailed visual inspection under proper lighting to ensure correct alignment and prevent short circuits.</li>
-            <li>Reinstalled the processor and verified successful system POST.</li>
-            <li>Tested system stability to confirm full functionality after repair.</li>
-            <li>Advised the client on safer handling during future PC builds.</li>
-          </ul>
-          <div class="case-result"><strong>Result:</strong> Successfully repaired a severely damaged CPU with 44 bent pins, restoring full functionality and saving the client from an expensive replacement.</div>
-        </div>
-
-        <div class="case-card">
-          <span class="case-tag">PC Building</span>
-          <h3>50+ Custom PC Builds</h3>
-          <p class="case-intro">Built and configured custom gaming and office systems for clients, including 20 units for a small computer caf&eacute; and 30 units for personal use.</p>
-          <ul>
-            <li>Handled component selection, assembly, cable management, and BIOS configuration.</li>
-            <li>Performed testing and troubleshooting before delivery.</li>
-            <li>Delivered systems tailored to performance needs and budget.</li>
-          </ul>
-          <div class="case-result"><strong>Result:</strong> Consistently delivered stable, client-tailored systems with zero rework required after handoff.</div>
-        </div>
-
-        <div class="case-card">
-          <span class="case-tag">Remote Support</span>
-          <h3>Remote IT Troubleshooting</h3>
-          <p class="case-intro">Supported users remotely for common software, driver, and connectivity issues.</p>
-          <ul>
-            <li>Used TeamViewer and AnyDesk for remote diagnosis and support.</li>
-            <li>Resolved 95% of issues on first contact during freelance work.</li>
-            <li>Provided clear guidance and practical fixes for end users.</li>
-          </ul>
-          <div class="case-result"><strong>Result:</strong> High first-contact resolution rate with minimal follow-up tickets.</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Certifications &amp; training</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="cert-list reveal">
-        <div class="cert-item">
-          <img class="cert-logo" src="google-cert.png" alt="Google logo" />
-          <div class="cert-info">
-            <div class="cert-name">Google IT Support Professional Certificate</div>
-            <div class="cert-issuer">Coursera &middot; Issued March 23, 2026</div>
+<section id="skills" class="scene shape-right" data-scene data-side="1">
+  <div class="col reveal">
+    <h2>What I work with.</h2>
+        <div class="comp-list">
+          <div class="comp-card" style="--i:0">
+            <div class="comp-card-inner">
+              <span class="comp-label">IT support &amp; help desk</span>
+              <div class="comp-values">Tier 1/Tier 2 Support, Remote &amp; On-Site Troubleshooting, Ticketing Systems, Ticket Prioritization &amp; Escalation, First Contact Resolution, Incident Management, Customer Satisfaction, End-User Support</div>
+            </div>
           </div>
-          <a class="cert-link" href="https://www.credly.com/badges/76b7f5a4-6930-48c8-b67f-47088e3dff05" target="_blank" rel="noopener">Verify credential</a>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="azure.jpg" alt="Microsoft Azure logo" />
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Azure AI Fundamentals</div>
-            <div class="cert-issuer">TESDA &middot; Issued March 2026</div>
+          <div class="comp-card" style="--i:1">
+            <div class="comp-card-inner">
+              <span class="comp-label">Systems &amp; administration</span>
+              <div class="comp-values">Windows 10/11, Active Directory (basic), Microsoft 365, Google Workspace, User Account Setup, Password Resets, MFA &amp; Access Management, Endpoint Security, Backup Solutions, System Updates &amp; Maintenance</div>
+            </div>
           </div>
-          <a class="cert-link" href="microsoft.pdf" download="Microsoft_Azure_AI_Fundamentals_TESDA.pdf">View certificate</a>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="tesda-logo.png" alt="TESDA logo" />
-          <div class="cert-info">
-            <div class="cert-name">Microsoft Cybersecurity Course: Security, Compliance, and Identity Fundamentals</div>
-            <div class="cert-issuer">TESDA Online Program &middot; Issued September 8, 2026</div>
+          <div class="comp-card" style="--i:2">
+            <div class="comp-card-inner">
+              <span class="comp-label">Hardware &amp; deployment</span>
+              <div class="comp-values">PC Deployment &amp; Setup, Custom PC Builds, Hardware Diagnostics &amp; Repair, OS Installation, Laptop &amp; Desktop Support, Printer Troubleshooting (basic), Mobile Device Support, Wi-Fi CCTV Setup (basic)</div>
+            </div>
           </div>
-          <a class="cert-link" href="tesda-cybersecurity-cert.pdf" download="Microsoft_Cybersecurity_Fundamentals_TESDA.pdf">View certificate</a>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="efset.jpg" alt="EF SET logo" />
-          <div class="cert-info">
-            <div class="cert-name">EF SET English Certificate &mdash; C2 Proficient (74/100)</div>
-            <div class="cert-issuer">Issued September 6, 2026</div>
+          <div class="comp-card" style="--i:3">
+            <div class="comp-card-inner">
+              <span class="comp-label">Networking (basic)</span>
+              <div class="comp-values">TCP/IP, DNS, DHCP, VPN, Wi-Fi, LAN Setup, Modem &amp; Router Configuration, Connectivity Troubleshooting (ping, traceroute, nslookup)</div>
+            </div>
           </div>
-          <a class="cert-link" href="efset-cert.pdf" download="EF_SET_English_Certificate.pdf">View certificate</a>
-        </div>
-        <div class="cert-item">
-          <img class="cert-logo" src="NCII.jpg" alt="AMA Computer College logo" />
-          <div class="cert-info">
-            <div class="cert-name">NC II Computer Systems Servicing</div>
-            <div class="cert-issuer">AMA Computer College</div>
+          <div class="comp-card" style="--i:4">
+            <div class="comp-card-inner">
+              <span class="comp-label">Documentation</span>
+              <div class="comp-values">Technical Documentation, Troubleshooting Guides, Knowledge Base Articles, IT Asset Records</div>
+            </div>
           </div>
-          <a class="cert-link" href="NC2.pdf" download="NCII_Computer_Systems_Servicing.pdf">View certificate</a>
+          <div class="comp-card" style="--i:5">
+            <div class="comp-card-inner">
+              <span class="comp-label">Tools</span>
+              <div class="comp-values">ServiceNow &amp; Freshdesk (training / simulator), ClickUp (basic), TeamViewer, AnyDesk, Remote Desktop, PowerShell, CLI, Slack, Zoom, Microsoft Teams, AI Productivity Tools</div>
+            </div>
+          </div>
+          <div class="comp-card" style="--i:6">
+            <div class="comp-card-inner">
+              <span class="comp-label">Web development</span>
+              <div class="comp-values">HTML, CSS, JavaScript, PHP, MySQL, Chatbot &amp; Live Chat Integration, GitHub Pages</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <p class="cert-progress"><strong>In progress:</strong> CompTIA A+ Certification &middot; Cisco CCNA (200-301). Also holds AMA Computer College recognition for Best in Speed Typing (70+ WPM).</p>
-    </div>
-  </section>
 
-  <section class="panel" id="education">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Education</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="edu-block reveal">
-        <div class="tl-role">BS Information Technology &mdash; Graduating Student (Trimester System)</div>
-        <div class="tl-company">AMA Computer College &middot; Philippines &middot; May 2017 &ndash; Oct 2019</div>
-        <p style="margin-top:10px; font-size:0.95rem;">Relevant coursework: networking, systems administration, technical support, computer hardware servicing, database management, web development.</p>
-      </div>
+  </div>
+</section>
+
+<section id="experience" class="scene shape-left" data-scene data-side="-1">
+  <div class="col">
+    <h2 class="reveal">Where I&rsquo;ve worked.</h2>
+    <div class="timeline">
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-date">Sep 2020 &ndash; Present</div>
+            <div class="tl-role">IT Support Specialist (Freelance)</div>
+            <div class="tl-company">Self-Employed &mdash; IT Support, PC Build &amp; Web Services, Philippines</div>
+            <ul>
+              <li>Diagnose and fix hardware, software, and connectivity issues for small-business and home clients, on-site and remotely, from no-internet and Wi-Fi/Bluetooth problems to slow or non-booting PCs and BIOS errors, explaining each fix in simple terms so clients understand what went wrong.</li>
+              <li>Upgrade and maintain client computers (Windows upgrades, RAM and storage upgrades, driver and software updates, PC cleaning), set up user accounts and password resets, and deliver remote support via TeamViewer, AnyDesk, and Remote Desktop.</li>
+              <li>Built and deployed 50+ custom PCs, including a 20-unit computer caf&eacute; order and a 10-unit computer shop where I also set up the internet connection, modem, and network.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Jul 2023 &ndash; Nov 2023</div>
+            <div class="tl-role">Data Analyst / Audio Data Labeling (Part-time, Remote)</div>
+            <div class="tl-company">Appen, Remote</div>
+            <ul>
+              <li>Reviewed and validated Tagalog and English language data for an AI translation project, meeting strict quality and accuracy standards.</li>
+              <li>Consistently met a weekly quota of 250 tasks while managing my own flexible, part-time schedule.</li>
+              <li>Documented findings clearly to keep deliverables consistent and reliable.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Jan 2016 &ndash; Oct 2016</div>
+            <div class="tl-role">IT Support Specialist / Computer Technician</div>
+            <div class="tl-company">GadgetzBiz Repair Shop, Philippines</div>
+            <ul>
+              <li>Provided Tier 1 and Tier 2 technical support for desktops, laptops, and mobile devices, resolving hardware, software, and network issues.</li>
+              <li>Logged, tracked, and documented service requests while maintaining accurate repair and inventory records.</li>
+              <li>Assisted users with software installation, account configuration, troubleshooting, and technical guidance.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Jul 2013 &ndash; Jan 2016</div>
+            <div class="tl-role">Computer Caf&eacute; Supervisor &amp; Technician</div>
+            <div class="tl-company">CityLink, Philippines</div>
+            <ul>
+              <li>Supervised daily operations and supported 100+ users across 30+ workstations as the primary point of contact for technical issues.</li>
+              <li>Maintained near 100% system uptime through proactive troubleshooting, repairs, and routine maintenance.</li>
+              <li>Wrote simple troubleshooting guides and trained staff to use them, improving team efficiency and service quality.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">Jan 2013 &ndash; Jun 2013</div>
+            <div class="tl-role">Outbound Sales Representative</div>
+            <div class="tl-company">Zaltivar Telecom Services, Philippines</div>
+            <ul>
+              <li>Handled outbound customer calls, explaining Maybank credit card products and resolving customer inquiries.</li>
+              <li>Documented customer interactions accurately and consistently met quality and productivity targets.</li>
+            </ul>
+          </div>
+
+        </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="work" class="scene shape-right" data-scene data-side="1">
+  <div class="col">
+    <div class="reveal">
+      <h2>Things I&rsquo;ve built and fixed.</h2>
+        <div class="project-block">
+          <h3>Web-Based Online Ordering System &mdash; Abundance Mini Grocery</h3>
+          <div class="project-meta">Full-stack web development project, February 2026</div>
+          <ul>
+            <li>Designed and developed a complete web-based online ordering system for a real small business using PHP, MySQL, HTML, CSS, and JavaScript, enabling customers to browse products, add items to a cart, and place orders online with pickup or delivery options.</li>
+            <li>Built customer features including registration, login, cart, checkout, and order tracking, plus an admin dashboard for order, product, and customer management.</li>
+            <li>Designed and implemented a relational MySQL database with 5 normalized tables covering users, products, orders, order items, and administrator data.</li>
+            <li>Integrated Tawk.to live chat for customer-to-staff communication and developed an AI chatbot as part of the online ordering system.</li>
+            <li>Deployed and tested the system end-to-end across 14 functional test cases, with all documented tests passing.</li>
+          </ul>
+          <div class="tech-line"><strong>Tech stack:</strong> PHP, MySQL, HTML5, CSS3, JavaScript, XAMPP, VS Code, Tawk.to</div>
+          <h3 class="sub" style="margin-top:28px">Jusco United Consumer Goods Trading</h3>
+          <div class="project-meta">Business website for a beverage distributor, Oct 2026 &ndash; Present (in progress)</div>
+          <ul>
+            <li>Building a responsive company website for a beverage distributor client. A working demo is live on GitHub Pages while development continues.</li>
+          </ul>
+          <div class="tech-line"><a href="https://13hennessy.github.io/juscodemo" target="_blank" rel="noopener">View the live demo</a></div>
+        </div>
+
+      <h3 class="sub">Troubleshooting case studies</h3>
+        <div class="case-grid">
+          <details class="case-card"><summary><span class="case-tag">Hardware Troubleshooting</span><h3>High-End Gaming PC Restart Issue (Intel Core i9-14900KF)</h3><span class="chev" aria-hidden="true"></span></summary><div class="case-body">
+            <p class="case-intro">Received a high-end gaming PC with constant random restarts. The previous repair shop initially identified the issue as a faulty motherboard.</p>
+            <ul>
+              <li>Observed consistent random restarts during normal usage and system idle.</li>
+              <li>Verified motherboard functionality by testing with a known working 14th gen CPU.</li>
+              <li>Checked RAM, SSD, and PSU, and performed a CMOS reset to eliminate configuration issues.</li>
+              <li>Tested with an alternative power supply to rule out power-related problems.</li>
+              <li>Updated BIOS and monitored system behavior for stability improvements.</li>
+              <li>Performed CPU cross-testing using another 14th gen processor, which stabilized the system.</li>
+              <li>Identified the processor as the root cause after systematic elimination of all other components.</li>
+              <li>Verified with Intel support that the unit was part of a known faulty batch and eligible for warranty replacement.</li>
+            </ul>
+            <div class="case-result"><strong>Result:</strong> Confirmed a faulty i9-14900KF processor, verified known batch issues with Intel, and resolved the problem through warranty replacement.</div>
+          </div></details><details class="case-card"><summary><span class="case-tag">CPU Repair</span><h3>Gaming PC CPU Repair (Bent Pins &mdash; Ryzen 5 5600X)</h3><span class="chev" aria-hidden="true"></span></summary><div class="case-body">
+            <p class="case-intro">Repaired a gaming PC CPU after the client accidentally dropped the processor during a self-build, causing severe pin damage (44 bent pins).</p>
+            <ul>
+              <li>Diagnosed CPU failure caused by accidental physical damage during client installation.</li>
+              <li>Confirmed severe damage involving 44 bent processor pins.</li>
+              <li>Carefully realigned bent pins using a ballpoint pen tip for controlled, safe adjustment.</li>
+              <li>Avoided using tweezers to prevent further damage to delicate gold pins during the repair.</li>
+              <li>Performed a detailed visual inspection under proper lighting to ensure correct alignment and prevent short circuits.</li>
+              <li>Reinstalled the processor and verified successful system POST.</li>
+              <li>Advised the client on safer handling during future PC builds.</li>
+            </ul>
+            <div class="case-result"><strong>Result:</strong> Successfully repaired a severely damaged CPU with 44 bent pins, restoring full functionality and saving the client from an expensive replacement.</div>
+          </div></details><details class="case-card"><summary><span class="case-tag">PC Building</span><h3>50+ Custom PC Builds</h3><span class="chev" aria-hidden="true"></span></summary><div class="case-body">
+            <p class="case-intro">Built and configured custom gaming and office systems for clients, including 20 units for a small computer caf&eacute; and 30 units for personal use.</p>
+            <ul>
+              <li>Handled component selection, assembly, cable management, and BIOS configuration.</li>
+              <li>Performed testing and troubleshooting before delivery.</li>
+              <li>Delivered systems tailored to performance needs and budget.</li>
+            </ul>
+            <div class="case-result"><strong>Result:</strong> Consistently delivered stable, client-tailored systems with zero rework required after handoff.</div>
+          </div></details><details class="case-card"><summary><span class="case-tag">Remote Support</span><h3>Remote IT Troubleshooting</h3><span class="chev" aria-hidden="true"></span></summary><div class="case-body">
+            <p class="case-intro">Supported users remotely for common software, driver, and connectivity issues.</p>
+            <ul>
+              <li>Used TeamViewer and AnyDesk for remote diagnosis and support.</li>
+              <li>Resolved 95% of issues on first contact during freelance work.</li>
+              <li>Provided clear guidance and practical fixes for end users.</li>
+            </ul>
+            <div class="case-result"><strong>Result:</strong> High first-contact resolution rate with minimal follow-up tickets.</div>
+          </div></details></div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="scene shape-left" data-scene data-side="-1">
+  <div class="col reveal">
+    <h2>Certified and still learning.</h2>
+        <div class="cert-list">
+          <div class="cert-card" style="--i:0">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="google-cert.png" alt="Google logo" />
+                <div class="cert-info">
+                  <div class="cert-name">Google IT Support Professional Certificate</div>
+                  <div class="cert-issuer">Coursera, March 2026 &middot; Credential ID: 6JYKNIBFP0M7</div>
+                </div>
+              </div>
+              <a class="cert-link" href="https://coursera.org/verify/professional-cert/6JYKNIBFP0M7" target="_blank" rel="noopener">Verify credential</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:1">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="azure.jpg" alt="Microsoft Azure logo" />
+                <div class="cert-info">
+                  <div class="cert-name">Microsoft Azure AI Fundamentals</div>
+                  <div class="cert-issuer">TESDA, March 2026 &middot; Certificate ID: DAQ7SJj7n7</div>
+                </div>
+              </div>
+              <a class="cert-link" href="microsoft.pdf" download="Microsoft_Azure_AI_Fundamentals_TESDA.pdf">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:2">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="tesda-logo.png" alt="TESDA logo" />
+                <div class="cert-info">
+                  <div class="cert-name">Microsoft Cybersecurity Course: Security, Compliance, and Identity Fundamentals</div>
+                  <div class="cert-issuer">TESDA Online Program, September 2026 &middot; Certificate ID: 8QVXZzSBDA</div>
+                </div>
+              </div>
+              <a class="cert-link" href="tesda-cybersecurity-cert.pdf" download="Microsoft_Cybersecurity_Fundamentals_TESDA.pdf">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:3">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="efset.jpg" alt="EF SET logo" />
+                <div class="cert-info">
+                  <div class="cert-name">EF SET English Certificate &mdash; C2 Proficient (74/100)</div>
+                  <div class="cert-issuer">September 2026 &middot; cert.efset.org/LnbL2F</div>
+                </div>
+              </div>
+              <a class="cert-link" href="efset-cert.pdf" download="EF_SET_English_Certificate.pdf">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:4">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="NCII.jpg" alt="AMA Computer College logo" />
+                <div class="cert-info">
+                  <div class="cert-name">NC II Computer Systems Servicing</div>
+                  <div class="cert-issuer">AMA Computer College</div>
+                </div>
+              </div>
+              <a class="cert-link" href="NC2.pdf" download="NCII_Computer_Systems_Servicing.pdf">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:5">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <img class="cert-logo" src="bluetally-logo.png" alt="BlueTally logo" />
+                <div class="cert-info">
+                  <div class="cert-name">IT Asset Management Foundations</div>
+                  <div class="cert-issuer">BlueTally, September 2026 &middot; Certificate ID: imp1qpdpbl</div>
+                </div>
+              </div>
+              <a class="cert-link" href="bluetally-itam-cert.pdf" download="BlueTally_IT_Asset_Management_Foundations.pdf">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-card" style="--i:6">
+            <div class="cert-card-inner">
+              <div class="cert-top">
+                <div class="cert-info">
+                  <div class="cert-name">DICT Region 1 SPARK General Virtual Assistance (GVA) 2.0 Training</div>
+                  <div class="cert-issuer">Training completed, November 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="cert-progress"><strong>In progress:</strong> CompTIA A+ Certification and Cisco CCNA (200-301). Also holds AMA Computer College recognition for Best in Speed Typing (70+ WPM).</p>
+
+        <div class="edu-block">
+          <div class="tl-role">BS Information Technology (Undergraduate; remaining subjects, OJT, and thesis to complete)</div>
+          <div class="tl-company">AMA Computer College, Philippines, May 2017 &ndash; Oct 2019</div>
+          <p style="margin-top:10px; font-size:0.93rem; color: var(--dim);">Relevant coursework: networking, systems administration, technical support, computer hardware servicing, database management, web development.</p>
+        </div>
+
+  </div>
+</section>
+
+<section id="contact" class="scene shape-right" data-scene data-side="1">
+  <div class="col reveal">
+    <h2>Need someone to keep things running?</h2>
+    <p>Open to on-site, hybrid, or remote roles in the Philippines or abroad. Willing to relocate, and open to shifting schedules, night shifts, and weekends. Can start immediately.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><span class="label">Email</span><a href="mailto:raffypalermowork@gmail.com">raffypalermowork@gmail.com</a></div>
+      <div class="contact-item"><span class="label">Phone</span><a href="tel:+639955814916">+63 995 581 4916</a></div>
+      <div class="contact-item"><span class="label">Location</span><span class="value">La Union, Philippines</span></div>
+      <div class="contact-item"><span class="label">LinkedIn</span><a href="https://linkedin.com/in/raffy-garcia-palermo" target="_blank" rel="noopener">linkedin.com/in/raffy-garcia-palermo</a></div>
+      <div class="contact-item"><span class="label">Languages</span><span class="value">Filipino (native), English (C2 written / B1 speaking)</span></div>
+      <div class="contact-item"><span class="label">Remote setup</span><span class="value">High-speed fiber internet with UPS power redundancy</span></div>
+    </div>
+    <div class="actions"><a class="pill" href="RaffyPalermo_IT_SUPPORT_Resume.pdf" download="Raffy_Garcia_Palermo_Resume.pdf">Download resume</a></div>
+    <div class="foot">&copy; 2026 Raffy Garcia Palermo</div>
+  </div>
+</section>
 
 </main>
 
-<footer id="contact">
-  <div class="wrap">
-    <h2>Get in touch</h2>
-    <p>Open to full-time and part-time remote IT Support, Helpdesk, and Technical Support roles.</p>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <span class="label">Email</span>
-        <a href="mailto:raffypalermowork@gmail.com">raffypalermowork@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span class="label">Phone</span>
-        <a href="tel:+639955814916">+63 995 581 4916</a>
-      </div>
-      <div class="contact-item">
-        <span class="label">Location</span>
-        <span class="value">La Union, Philippines</span>
-      </div>
-      <div class="contact-item">
-        <span class="label">LinkedIn</span>
-        <a href="https://linkedin.com/in/raffy-garcia-palermo" target="_blank" rel="noopener">linkedin.com/in/raffy-garcia-palermo</a>
-      </div>
-      <div class="contact-item">
-        <span class="label">Languages</span>
-        <span class="value">Filipino (native), English (C2 written / B1 speaking)</span>
-      </div>
-      <div class="contact-item">
-        <span class="label">Remote setup</span>
-        <span class="value">High-speed fiber internet with UPS power redundancy</span>
-      </div>
-    </div>
-    <div class="footer-actions">
-      <a class="btn btn-primary" href="RaffyPalermo_IT_SUPPORT_Resume.pdf" download="Raffy_Garcia_Palermo_Resume.pdf">Download resume</a>
-    </div>
-    <div class="footer-bottom">&copy; 2026 Raffy Garcia Palermo</div>
-  </div>
-</footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-  (function () {
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+(function () {
+  // ===== Reveal text on scroll =====
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rv = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) { rv.forEach(function (e) { e.classList.add('is-visible'); }); }
+  else {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } }); }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+    rv.forEach(function (e) { io.observe(e); });
+  }
 
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      document.querySelectorAll('.reveal, .tl-item').forEach(function (el) {
-        el.classList.add('is-visible');
-      });
-      return;
-    }
+  // ===== Particle shapes =====
+  var canvas = document.getElementById('gl');
+  if (!window.THREE) { document.body.classList.add('no-gl'); return; }
+  var renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true, powerPreference: 'high-performance' }); }
+  catch (e) { document.body.classList.add('no-gl'); return; }
 
-    var revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  var small = window.innerWidth < 760;
+  var N = small ? 7000 : 15000;
+  function rng(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
-    document.querySelectorAll('.reveal, .tl-item').forEach(function (el) {
-      revealObserver.observe(el);
+  function box(cx, cy, cz, sx, sy, sz, rx) {
+    var ax = sy * sz, ay = sx * sz, az = sx * sy, tot = 2 * (ax + ay + az);
+    var c = Math.cos(rx || 0), s = Math.sin(rx || 0);
+    return function (r) {
+      var q = r() * tot, x, y, z, u = r() - 0.5, v = r() - 0.5;
+      if (q < 2 * ax) { x = (q < ax ? -0.5 : 0.5) * sx; y = u * sy; z = v * sz; }
+      else if (q < 2 * ax + 2 * ay) { y = (q < 2 * ax + ay ? -0.5 : 0.5) * sy; x = u * sx; z = v * sz; }
+      else { z = (q < 2 * ax + 2 * ay + az ? -0.5 : 0.5) * sz; x = u * sx; y = v * sy; }
+      return [cx + x, cy + y * c - z * s, cz + y * s + z * c];
+    };
+  }
+  function sph(cx, cy, cz, rad, jit) {
+    return function (r) {
+      var u = r() * 2 - 1, t = r() * 6.2832, q = Math.sqrt(1 - u * u), rr = rad * (1 + (jit || 0) * (r() - 0.5));
+      return [cx + rr * q * Math.cos(t), cy + rr * u, cz + rr * q * Math.sin(t)];
+    };
+  }
+  function seg(a, b, n) {
+    return function (r) { var t = r(); return [a[0] + (b[0] - a[0]) * t + (r() - 0.5) * n, a[1] + (b[1] - a[1]) * t + (r() - 0.5) * n, a[2] + (b[2] - a[2]) * t + (r() - 0.5) * n]; };
+  }
+  function fill(parts, seed, rx, ry, sc) {
+    var r = rng(seed), out = new Float32Array(N * 3), tw = 0, i = 0;
+    parts.forEach(function (p) { tw += p.w; });
+    var cx = Math.cos(rx || 0), sx = Math.sin(rx || 0), cy = Math.cos(ry || 0), sy = Math.sin(ry || 0), k = sc || 1;
+    parts.forEach(function (p, pi) {
+      var cnt = pi === parts.length - 1 ? N - i : Math.round(N * p.w / tw);
+      for (var n = 0; n < cnt && i < N; n++, i++) {
+        var v = p.f(r), x = v[0], y = v[1], z = v[2];
+        var y2 = y * cx - z * sx, z2 = y * sx + z * cx;
+        var x3 = x * cy + z2 * sy, z3 = -x * sy + z2 * cy;
+        out[i * 3] = x3 * k; out[i * 3 + 1] = y2 * k; out[i * 3 + 2] = z3 * k;
+      }
     });
+    return new THREE.BufferAttribute(out, 3);
+  }
 
-    // Timeline draw-in: fill the vertical line as items become visible
-    var timeline = document.querySelector('.timeline');
-    if (timeline) {
-      var items = Array.prototype.slice.call(timeline.querySelectorAll('.tl-item'));
-      var updateProgress = function () {
-        var lastVisibleIndex = -1;
-        items.forEach(function (item, i) {
-          if (item.classList.contains('is-visible')) lastVisibleIndex = i;
-        });
-        if (lastVisibleIndex === -1) return;
-        var target = items[lastVisibleIndex];
-        var pct = ((target.offsetTop + target.offsetHeight * 0.3) / timeline.offsetHeight) * 100;
-        timeline.style.setProperty('--tl-progress', Math.min(pct, 100) + '%');
-      };
-
-      var timelineObserver = new MutationObserver(updateProgress);
-      items.forEach(function (item) {
-        timelineObserver.observe(item, { attributes: true, attributeFilter: ['class'] });
-      });
+  // 0 globe (network)
+  var globe = fill([
+    { w: 0.8, f: sph(0, 0, 0, 1.75, 0.02) },
+    { w: 0.2, f: function (r) { var t = r() * 6.2832, rr = 2.6 + (r() - 0.5) * 0.08, x = rr * Math.cos(t), z = rr * Math.sin(t), a = 0.42; return [x * Math.cos(a), x * Math.sin(a), z]; } }
+  ], 11, 0.2, 0, 1);
+  // 1 laptop
+  var ha = -0.2, hy = -0.84;
+  var laptop = fill([
+    { w: 0.42, f: box(0, -0.9, 0, 3.2, 0.12, 2.1, 0) },
+    { w: 0.58, f: box(0, hy + 0.95 * Math.cos(ha), -1.0 + 0.95 * Math.sin(ha), 3.0, 1.9, 0.08, ha) }
+  ], 12, 0.12, -0.5, 1.0);
+  // 2 network
+  var nr = rng(21), nodes = [], edges = [], ek = {};
+  for (var a = 0; a < 16; a++) { var u = nr() * 2 - 1, t = nr() * 6.2832, q = Math.sqrt(1 - u * u); nodes.push([1.7 * q * Math.cos(t), 1.7 * u, 1.7 * q * Math.sin(t)]); }
+  nodes.forEach(function (p, i) {
+    var d = nodes.map(function (o, j) { return [j, (p[0] - o[0]) * (p[0] - o[0]) + (p[1] - o[1]) * (p[1] - o[1]) + (p[2] - o[2]) * (p[2] - o[2])]; }).filter(function (x) { return x[0] !== i; }).sort(function (x, y) { return x[1] - y[1]; }).slice(0, 2);
+    d.forEach(function (x) { var key = Math.min(i, x[0]) + '-' + Math.max(i, x[0]); if (!ek[key]) { ek[key] = 1; edges.push([i, x[0]]); } });
+  });
+  var netParts = [];
+  nodes.forEach(function (p) { netParts.push({ w: 0.45 / nodes.length, f: sph(p[0], p[1], p[2], 0.14, 0) }); });
+  edges.forEach(function (e) { netParts.push({ w: 0.55 / edges.length, f: seg(nodes[e[0]], nodes[e[1]], 0.02) }); });
+  var network = fill(netParts, 13, 0, 0, 1);
+  // 3 chip
+  var chipParts = [{ w: 0.34, f: box(0, 0, 0, 2.0, 0.22, 2.0, 0) }, { w: 0.14, f: box(0, 0.19, 0, 1.0, 0.1, 1.0, 0) }];
+  for (var side = 0; side < 4; side++) {
+    for (var pi = 0; pi < 10; pi++) {
+      (function (side, pi) {
+        var o = -0.85 + 1.7 * pi / 9, a1, b1;
+        if (side === 0) { a1 = [1.0, 0, o]; b1 = [1.55, 0, o]; }
+        else if (side === 1) { a1 = [-1.0, 0, o]; b1 = [-1.55, 0, o]; }
+        else if (side === 2) { a1 = [o, 0, 1.0]; b1 = [o, 0, 1.55]; }
+        else { a1 = [o, 0, -1.0]; b1 = [o, 0, -1.55]; }
+        chipParts.push({ w: 0.52 / 40, f: seg(a1, b1, 0.03) });
+      })(side, pi);
     }
-  })();
+  }
+  var chip = fill(chipParts, 14, 0.9, 0.4, 1.0);
+  // 4 server rack
+  var rackParts = [];
+  for (var s = 0; s < 5; s++) {
+    rackParts.push({ w: 0.17, f: box(0, -1.4 + s * 0.7, 0, 2.4, 0.5, 1.5, 0) });
+    rackParts.push({ w: 0.03, f: box(-0.9, -1.4 + s * 0.7, 0.76, 0.5, 0.08, 0.04, 0) });
+  }
+  var rack = fill(rackParts, 15, 0.1, -0.6, 0.95);
+  // 5 shield
+  function sw(y) { return y >= 0.2 ? 1.35 : 1.35 * Math.sqrt(Math.max(0, (y + 1.9) / 2.1)); }
+  var shield = fill([
+    { w: 0.72, f: function (r) { for (var k = 0; k < 40; k++) { var x = (r() * 2 - 1) * 1.4, y = -1.9 + r() * 3.6; if (Math.abs(x) < sw(y) && y < 1.7) return [x, y, 0.36 * (1 - (x / 1.4) * (x / 1.4)) + (r() - 0.5) * 0.04]; } return [0, 0, 0]; } },
+    { w: 0.28, f: function (r) { var m = r(); if (m < 0.75) { var y = -1.9 + r() * 3.6, x = (r() < 0.5 ? -1 : 1) * sw(y); return [x, y, 0.0 + (r() - 0.5) * 0.05]; } var x2 = (r() * 2 - 1) * 1.35; return [x2, 1.7, 0.3 * (1 - (x2 / 1.4) * (x2 / 1.4))]; } }
+  ], 16, 0, 0, 1.05);
+  // 6 cloud
+  var cl = [[-0.9, -0.2, 0, 0.8], [0, 0.3, 0, 1.0], [0.95, -0.1, 0, 0.85], [-0.2, -0.35, 0.2, 0.7], [0.5, -0.35, -0.1, 0.7], [1.65, -0.5, 0, 0.5], [-1.65, -0.5, 0, 0.5]];
+  var cloud = fill(cl.map(function (c) {
+    var f = sph(c[0], c[1], c[2], c[3], 0.02);
+    return { w: c[3], f: function (r) { var p = f(r); if (p[1] < -0.95) p[1] = -0.95 + (r() - 0.5) * 0.04; return p; } };
+  }), 17, 0.1, 0, 0.88);
+
+  var shapes = [globe, laptop, network, chip, rack, shield, cloud];
+  var K = shapes.length;
+
+  var rr = rng(99), colors = new Float32Array(N * 3), rands = new Float32Array(N * 3), sizes = new Float32Array(N);
+  var pal = [[0.55, 0.45, 1.0, 0.35], [1.0, 0.45, 0.75, 0.2], [1.0, 0.76, 0.38, 0.15], [0.95, 0.95, 1.0, 0.2], [0.33, 0.9, 0.84, 0.1]];
+  for (var i = 0; i < N; i++) {
+    var m = rr(), acc = 0, c = pal[0];
+    for (var p = 0; p < pal.length; p++) { acc += pal[p][3]; if (m < acc) { c = pal[p]; break; } }
+    colors[i * 3] = c[0]; colors[i * 3 + 1] = c[1]; colors[i * 3 + 2] = c[2];
+    rands[i * 3] = rr() * 2 - 1; rands[i * 3 + 1] = rr() * 2 - 1; rands[i * 3 + 2] = rr() * 2 - 1;
+    sizes[i] = 0.6 + rr() * 1.1;
+  }
+
+  var geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', shapes[0]);
+  geo.setAttribute('aTo', shapes[1]);
+  geo.setAttribute('aColor', new THREE.BufferAttribute(colors, 3));
+  geo.setAttribute('aRand', new THREE.BufferAttribute(rands, 3));
+  geo.setAttribute('aSize', new THREE.BufferAttribute(sizes, 1));
+
+  var uniforms = {
+    uMix: { value: 0 }, uTime: { value: 0 }, uPointer: { value: new THREE.Vector2() },
+    uScale: { value: 14 }, uOffset: { value: new THREE.Vector3() }, uOpacity: { value: 1 }, uScatter: { value: reduce ? 0.25 : 1.4 }
+  };
+  var mat = new THREE.ShaderMaterial({
+    uniforms: uniforms, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    vertexShader: [
+      'attribute vec3 aTo; attribute vec3 aColor; attribute vec3 aRand; attribute float aSize;',
+      'uniform float uMix, uTime, uScale, uScatter; uniform vec2 uPointer; uniform vec3 uOffset;',
+      'varying vec3 vColor; varying float vAlpha;',
+      'void main(){',
+      '  float e = uMix*uMix*(3.0-2.0*uMix);',
+      '  vec3 p = mix(position, aTo, e);',
+      '  p += aRand * sin(3.14159*uMix) * uScatter;',
+      '  p += 0.03*vec3(sin(uTime*0.8+aRand.x*6.0), cos(uTime*0.7+aRand.y*6.0), sin(uTime*0.6+aRand.z*6.0));',
+      '  float a = sin(uTime*0.25)*0.55 + uPointer.x*0.45;',
+      '  float c = cos(a), s = sin(a);',
+      '  p = vec3(c*p.x + s*p.z, p.y + uPointer.y*0.25, -s*p.x + c*p.z) + uOffset;',
+      '  vec4 mv = modelViewMatrix*vec4(p,1.0);',
+      '  gl_Position = projectionMatrix*mv;',
+      '  gl_PointSize = aSize*uScale/(-mv.z);',
+      '  vColor = aColor; vAlpha = clamp(1.5 - (-mv.z-4.5)*0.14, 0.3, 1.0);',
+      '}'
+    ].join('\n'),
+    fragmentShader: [
+      'varying vec3 vColor; varying float vAlpha; uniform float uOpacity;',
+      'void main(){ float r = length(gl_PointCoord-0.5); if(r>0.5) discard; float a = smoothstep(0.5,0.05,r);',
+      '  gl_FragColor = vec4(vColor, a*vAlpha*uOpacity*0.9); }'
+    ].join('\n')
+  });
+  var pts = new THREE.Points(geo, mat);
+  pts.frustumCulled = false;
+  var scene = new THREE.Scene(); scene.add(pts);
+  var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 50); camera.position.z = 6.5;
+
+  function resize() {
+    var w = window.innerWidth, h = window.innerHeight, pr = Math.min(window.devicePixelRatio || 1, 1.75);
+    renderer.setPixelRatio(pr); renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+    uniforms.uScale.value = pr * h * 0.019;
+    uniforms.uOpacity.value = w < 980 ? 0.5 : 1;
+  }
+  resize(); window.addEventListener('resize', resize);
+
+  var scenes = Array.prototype.slice.call(document.querySelectorAll('[data-scene]'));
+  var sides = scenes.map(function (s) { return parseFloat(s.getAttribute('data-side')) || 1; });
+  var ptrT = new THREE.Vector2(), P = 0, curIdx = -1, sideX = 1, last = performance.now(), hidden = false;
+  window.addEventListener('pointermove', function (e) { ptrT.set(e.clientX / window.innerWidth - 0.5, 0.5 - e.clientY / window.innerHeight); }, { passive: true });
+  document.addEventListener('visibilitychange', function () { hidden = document.hidden; if (!hidden) { last = performance.now(); loop(); } });
+
+  function target() {
+    var vh = window.innerHeight, yc = vh * 0.5, w = vh * 0.3, t = 0;
+    for (var i = 0; i < scenes.length - 1 && i < K - 1; i++) {
+      var B = scenes[i + 1].getBoundingClientRect().top;
+      t += Math.max(0, Math.min(1, (yc - (B - w)) / (2 * w)));
+    }
+    return t;
+  }
+
+  function loop() {
+    if (hidden) return;
+    var now = performance.now(), dt = Math.min(0.05, (now - last) / 1000); last = now;
+    var tg = target();
+    P = reduce ? tg : P + (tg - P) * Math.min(1, dt * 5);
+    var idx = Math.min(Math.floor(P), K - 2), f = P - idx;
+    if (idx !== curIdx) { geo.setAttribute('position', shapes[idx]); geo.setAttribute('aTo', shapes[idx + 1]); curIdx = idx; }
+    uniforms.uMix.value = f;
+    var sidx = Math.min(scenes.length - 1, idx), s1 = sides[sidx], s2 = sides[Math.min(scenes.length - 1, idx + 1)];
+    var sx = s1 + (s2 - s1) * f, off = window.innerWidth < 980 ? 0 : 1.95;
+    sideX += (sx - sideX) * Math.min(1, dt * 6);
+    uniforms.uOffset.value.set(sideX * off, 0, 0);
+    uniforms.uTime.value += reduce ? 0 : dt;
+    uniforms.uPointer.value.x += (ptrT.x - uniforms.uPointer.value.x) * 0.05;
+    uniforms.uPointer.value.y += (ptrT.y - uniforms.uPointer.value.y) * 0.05;
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
 </script>
 
 </body>
